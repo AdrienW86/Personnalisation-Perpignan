@@ -1,0 +1,59 @@
+.nav {
+    height: 10vh;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding-top: 20px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 1px solid black;
+}
+
+.ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.li {
+    font-size: 1.2em;
+    transition: .4s ease-in-out;
+}
+
+.li:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.active {
+    font-size: 1.2em;
+    color: red
+}
+
+.span {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+    left: 52px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8em;
+    padding: 6px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+
+.menu {
+   width: 0;
+    transition: left 0.3s ease-in-out; 
+}
+
+.open {
+   
+    transition: left 0.3s ease-in-out; 
+   width: 100%;
+  }
