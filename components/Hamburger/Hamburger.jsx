@@ -24,11 +24,13 @@ const Hamburger = ({productsLength}) => {
         <p className={styles.p}> Perpignan</p>
       </div>
       {isMenuOpen && (
-        <ul className={styles.menu}>
-          <li className={styles.menu_header}></li>
+       <div className={styles.filter}>
+         <ul className={styles.menu}>
           <li className={styles.menu_link}><Link href='/'> Accueil </Link> </li>
           <li className={styles.menu_link}><Link href='/shop'> Boutique </Link>  </li>         
         </ul>
+        <div className={styles.test}></div>
+       </div>
       )}
       <Link  href='/card'> 
         <li className={styles.menu_basket}>
