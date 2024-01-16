@@ -3,7 +3,9 @@ import Welcome from '@/assets/welcome.jpg'
 import Passport from '@/assets/passport.jpg'
 import SetBaby from '@/assets/set-baby.jpg'
 import SetBaby2 from '@/assets/set2.jpg'
+import SetBaby3 from '@/assets/set3.jpg'
 import Sac from '@/assets/sac.jpg'
+import Wallet from '@/assets/wallet.jpg'
 
 export const data = {
   top: [
@@ -31,23 +33,23 @@ export const data = {
   new: [
     {
         name: "Protège-passeport",
-        price: 52,
+        price: 31,
         picture: Passport
     },
     {
         name: "Set pour bébé",
-        price: 52,
+        price: 29,
         picture: SetBaby
     },
     {
-        name: "nouveau3",
-        price: 52,
-        picture: Banner2
+        name: "Set pour bébé",
+        price: 12,
+        picture: SetBaby3
     },
     {
-        name: "nouveau4",
-        price: 52,
-        picture: Banner2
-    }
+        name: "Porte-feuille",
+        price: 34,
+        picture: Wallet
+    },
   ]
 }
