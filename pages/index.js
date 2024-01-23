@@ -2,43 +2,32 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Banner from '@/components/Banner/Banner'
-import Card from '@/components/Card/Card'
+import Banner2 from '@/assets/banner2.jpg'
 import Form from '@/components/Form/Form'
 import Phone from '@/assets/phone.png'
 import Email from '@/assets/email.png'
 import Adress from '@/assets/adress2.png'
-import {data} from '@/data'
+import { data } from '@/data'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  console.log(data)
+ 
   return (
     <>     
        <Banner />
       <main className={`${styles.main} ${inter.className}`}>
-        <h2 className={styles.h2}> Top Ventes</h2>
-          <section className={styles.container}>
-            {data.top.map((el, index) => (
-              <Card 
-                key={index} 
-                name={el.name} 
-                price={el.price} 
-                picture={el.picture}
-              /> 
-            ))}
-          </section>
-          <h2 className={styles.h2}> Nouveautés </h2>
-          <section className={styles.container}>
-            {data.new.map((el, index) => (
-              <Card 
-                key={index} 
-                name={el.name} 
-                price={el.price} 
-                picture={el.picture}
-              /> 
-            ))}
-          </section>
+        <h2 className={styles.title}> Bienvenue sur notre site dédié aux cadeaux bébé personnalisés et autres !</h2>
+         <div className={styles.background}>
+         <Image 
+                src={Banner2}
+                fill
+                priority       
+                alt='banner'
+            />    
+          <p className={styles.p}>  {data.intro}</p>
+         </div>
           <h2 className={styles.h2}> Contact </h2>
           <section className={styles.container}>
          

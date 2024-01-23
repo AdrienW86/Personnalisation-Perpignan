@@ -28,7 +28,7 @@ const Hamburger = ({productsLength}) => {
          <ul className={styles.menu}>
           <li className={styles.menu_link}><Link href='/'> Accueil </Link> </li>
           <li className={styles.menu_link}><Link href='/shop'> Boutique </Link>  </li>   
-          <li className={styles.menu_link}><Link href='/shop'>Contact </Link>  </li>
+          <li className={styles.menu_link}><Link href='/contact'>Contact </Link>  </li>
         </ul>
         <div className={styles.test}></div>
        </div>
