@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Basket from '@/assets/basket.png';
+import Logo from '@/assets/ms-logo2.png'
+import Basket from '@/assets/panier.png';
 import styles from './hamburger.module.css';
 
 const Hamburger = ({productsLength}) => {
@@ -20,8 +21,13 @@ const Hamburger = ({productsLength}) => {
         <span className={styles.line}></span>
       </button>
       <div className={styles.h1}>
-        <p className={styles.p}> Personnalisation</p>
-        <p className={styles.p}> Perpignan</p>
+        <Image 
+          src={Logo}
+          height={100}
+          width={100}
+          className={styles.logoBasket}
+          alt="image du panier"
+        />        
       </div>
       {isMenuOpen && (
        <div className={styles.filter}>

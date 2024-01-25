@@ -4,16 +4,8 @@
   }
 
   .h1 {
-    font-family: 'Zeyada', cursive;
-    font-size: 2em;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    color: #DBB44F;
-    margin: 0;
-    text-align: center;
-    justify-content: center;
+   display: flex;
+   margin: 0 auto;
   }
 
   .p {
