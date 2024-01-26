@@ -21,11 +21,11 @@ export default function Home() {
         <h2 className={styles.title}> Bienvenue sur notre site dédié aux cadeaux bébé personnalisés et autres !</h2>
          <div className={styles.background}>
          <Image 
-                src={Banner2}
-                fill
-                priority       
-                alt='banner'
-            />    
+            src={Banner2}
+            fill
+            priority       
+            alt='banner'
+          />    
           <p className={styles.p}>  {data.intro}</p>
          </div>
          <h2 className={styles.h2}> Précautions d'emploi </h2>
