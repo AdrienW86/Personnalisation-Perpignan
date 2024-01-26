@@ -1,21 +1,32 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect} from 'react'; 
+import { useState, useEffect } from 'react'; 
 import Image from 'next/image';
 import { data } from '@/data';
-import styles from './imageModal.module.css'
+import styles from './imageModal.module.css';
 
 const ProductPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const product = data.products.find((el) => el.id === id) || data.productsColor.find((el) => el.id === id);
 
-  const [option, setSelectedOption] = useState(product.picture)
-
+  const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [image, setImage] = useState()
+
+  useEffect(() => {
+    if (id) {
+      const selectedProduct = data.products.find((el) => el.id === id) || data.productsColor.find((el) => el.id === id);
+      if (selectedProduct) {
+        setImage(selectedProduct.picture);
+        setProduct(selectedProduct);
+      } else {
+        // Gérer le cas où le produit n'est pas trouvé
+        console.log("Produit non trouvé pour l'ID:", id);
+      }
+    }
+  }, [id]);
 
   const handleOptionClick = (newOption) => {
-    setSelectedOption(newOption);
-    console.log(newOption)
+   setImage(newOption)
   };
 
   const handleQuantityChange = (event) => {
@@ -26,16 +37,12 @@ const ProductPage = () => {
     return <div>Produit non trouvé</div>;
   }
 
-  useEffect(() => {
-
-  },[option])
-
   return (
     <div>
-      {option &&    
+      {product &&    
         <div className={styles.modalBackdrop} >
           <div className={styles.modalContent}>
-            <Image src={option} alt="Fullscreen" className={styles.fullscreenImage} width={400} height={400}/>
+            <Image src={image} alt="Fullscreen" className={styles.fullscreenImage} width={400} height={400}/>
             <div className={styles.title}>
                 <h2 className={styles.h2}>{product.name}</h2>
                 <p className={styles.price}>{product.price}€ </p>
@@ -44,7 +51,7 @@ const ProductPage = () => {
               {product.options &&
                 <div> 
                   <h3 className={styles.h3}> Couleur </h3>
-                <div className={styles.box_btn}>
+                  <div className={styles.box_btn}>
                     {product.options.map((colorOption, index) => (
                         <button
                             key={index}
@@ -55,31 +62,26 @@ const ProductPage = () => {
                             {colorOption.color}
                         </button>
                     ))}
+                  </div>
                 </div>
-                </div>
-}
-                
-                <h3 className={styles.h3}> Personnalisation </h3>
-                  <input className={styles.input} />  
+              }
+              <h3 className={styles.h3}> Personnalisation </h3>
+              <input className={styles.input} />  
 
               <div className={styles.quantity}>
-              <h3 className={styles.h3quantity}> Quantité </h3>
+                <h3 className={styles.h3quantity}> Quantité </h3>
                 <select className={styles.select} value={quantity} onChange={handleQuantityChange}>
-            {[...Array(10)].map((_, index) => (
-              <option key={index} value={index + 1}>{index + 1}</option>
-            ))}
-              
-          </select>
-          </div>
+                  {[...Array(10)].map((_, index) => (
+                    <option key={index} value={index + 1}>{index + 1}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </div>
-}
+      }
     </div>
   );
 };
 
 export default ProductPage;
-
-
-
