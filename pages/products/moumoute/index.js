@@ -2,15 +2,18 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react'; 
 import Image from 'next/image';
 import { data } from '@/data';
-import styles from './imageModal.module.css';
+import styles from '@/pages/products/imageModal.module.css';
 
-const ProductPage = () => {
+const Passport = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState(data.productsColor[1]);
   const [quantity, setQuantity] = useState(1);
-  const [image, setImage] = useState()
+  const [image, setImage] = useState(data.productsColor[1].picture)
+
+  console.log(data.products[0])
+  console.log(product)
 
   useEffect(() => {
     if (id) {
@@ -84,4 +87,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default Passport;

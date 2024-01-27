@@ -12,7 +12,7 @@ export default function Shop() {
       <h2 className={styles.h2}> Top Ventes</h2>
       <section className={styles.container}>
         {data.products.map((el, index) => (
-          <Link href={`/products/${el.id}`} key={index}>         
+          <Link href={`/products/${el.url}`} key={index}>         
               <Card 
                 name={el.name} 
                 price={el.price} 
@@ -25,7 +25,7 @@ export default function Shop() {
       <h2 className={styles.h2}> Nouveautés </h2>
       <section className={styles.container}>
         {data.productsColor.map((el, index) => (
-          <Link href={`/products/${el.id}`} key={index}>
+          <Link href={`/products/${el.url}`} key={index}>
             
               <Card 
                 name={el.name} 

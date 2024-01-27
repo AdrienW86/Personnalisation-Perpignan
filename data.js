@@ -40,55 +40,64 @@ export const data = {
         id: uuidv4(),
         name: "Protège-passeport",
         price: 12.99,
-        picture: Passport
+        picture: Passport,
+        url: "passport"
     },
     {
         id: uuidv4(),
         name: "Coffret islamique",
         price: 38.99,
-        picture: Coffret
+        picture: Coffret,
+        url: "coffret"
     },
     {
         id: uuidv4(),
         name: "Sommeil velours",
         price: 34.99,
-        picture: Sommeil
+        picture: Sommeil,
+        url: "sommeil"
     },
     {
         id: uuidv4(),
         name: "Ballon personnalisé",
         price: 38.99,
-        picture: Welcome
+        picture: Welcome,
+        url: "ballon"
     },
     {
         id: uuidv4(),
         name: "Set couverture",
         price: 34.99,
-        picture: Couverture
+        picture: Couverture,
+        url: "couverture"
     },
     {
         id: uuidv4(),
         name: "Bouquet 10 roses personnalisé",
         price: 54.99,
-        picture: Rose
+        picture: Rose,
+        url: "roses"
     },
     {
         id: uuidv4(),
         name: "Sac en toile de jute",
         price: 15.99,
-        picture: Toile
+        picture: Toile,
+        url: "sac"
     },
     {
         id: uuidv4(),
         name: "Barboteuse",
         price: 29.99,
-        picture: Barboteuse
+        picture: Barboteuse,
+        url: "barboteuse"
     },
     {
         id: uuidv4(),
         name: "Panneau acrylique",
         price: 16.99,
-        picture: Panneau
+        picture: Panneau,
+        url: "panneau"
     },
   ],
   productsColor: [
@@ -97,6 +106,7 @@ export const data = {
         name: "Tapis",
         price: 18.99,
         picture: Tapis,
+        url: "tapis",
         options: [   
             { background: "blue", color: "bleu", img: Tapis},
             { background: "green", color: "vert", img: Tapis2},
@@ -109,6 +119,7 @@ export const data = {
         name: "Sac à dos moumoute",
         price: 27.99,
         picture: Sac1,
+        url: "moumoute",
         options: [
             { background: "black", color: "noir", img: Sac1},
             { background: "blue", color: "bleu", img: Sac2},
@@ -121,6 +132,7 @@ export const data = {
         name: "Carnet de santé",
         price: 34.99,
         picture: Wallet,
+        url: "carnet",
         options: [
             { background: "green", color: "vert", img: Wallet},
             { background: "pink", color: "rose", img: Wallet2},
@@ -131,6 +143,7 @@ export const data = {
         name: "Doudou",
         price: 13.99,
         picture: Doudou,
+        url: "doudou",
         options: [
             { background: "pink", color: "rose", img: Doudou},
             { background: "blue", color: "bleu", img: Doudou2},

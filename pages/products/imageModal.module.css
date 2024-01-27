@@ -2,8 +2,7 @@
     width: 100%;
     background: white;
     display: flex;
-    justify-content: center;
-   
+    justify-content: center; 
   }
   
   .modalContent {
@@ -20,16 +19,24 @@
     margin-top: 20px;
     padding: 8px;
     display: flex;
+   
+    flex-direction: column;
     justify-content: space-between;
   }
 
   .h2 {
-    width: 250px;
+    font-size: 2.5em;
+    font-weight: 400;
   }
 
   .price {
-    padding-top: 4px;
+    padding-top: 24px;
     font-size: 1.2em;
+  }
+
+  .tva {
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
   }
 
   .custom {
@@ -39,8 +46,8 @@
 
   .h3 {
     width: 100%;
-    font-size: 1.5em;
-    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
   }
 
   .box_btn {
@@ -48,6 +55,31 @@
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+  }
+
+  .boxBtnColor {
+    display: flex;
+  }
+
+  .colorBtn {
+    width: 120px;
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid rgb(143, 143, 143);
+    transition: .4s ease-in-out;
+    margin: 15px 10px 30px 0px;
+    background-color: #fff;
+  }
+
+  .colorBtn:hover {
+    border: 1px solid rgb(0, 0, 0);
+    
+    cursor: pointer;
+  }
+
+  .activeColorBtn {
+    color: white;
+    background-color: black;
   }
 
   .btn {
@@ -75,19 +107,42 @@
 
   .input {
     display: flex;
-    margin: 30px auto;
+    width: 100%;
+    height: 30px;
+    margin: 10px 0 30px 0;
+    padding-left: 6px;
   }
 
   .h3quantity {
+    font-size: 1.2em;
+    font-weight: 400;
     margin-right: 6px;
   }
 
   .quantity {
     display: flex;
-    justify-content: center;
+   
   }
 
   .select {
-  
+    margin-top: 2px;
+    margin-bottom: 30px;
   }
   
+  .basketBtn {
+    width: 100%;
+    padding: 12px;
+    max-width: 800px;
+    border-radius: 24px;
+    font-size: 1.2em;
+    transition: .4s ease-in-out;
+    border: 2px solid rgb(65, 65, 65);
+    background-color: #fff;
+    margin-bottom: 80px;
+  }
+
+  .basketBtn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+  }
