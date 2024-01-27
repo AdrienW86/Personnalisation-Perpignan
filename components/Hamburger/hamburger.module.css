@@ -132,5 +132,6 @@
 
 .logoBasket {
    position: relative;
-   bottom: 5px
+   bottom: 5px;
+   z-index: 10
 }
