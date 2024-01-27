@@ -108,10 +108,10 @@ export const data = {
         picture: Tapis,
         url: "tapis",
         options: [   
-            { background: "blue", color: "bleu", img: Tapis},
-            { background: "green", color: "vert", img: Tapis2},
-            { background: "brown", color: "brun", img: Tapis3},
-            { background: "grey", color: "gris", img: Tapis4},
+            { background: "blue", color: "Bleu", img: Tapis},
+            { background: "green", color: "Vert", img: Tapis2},
+            { background: "brown", color: "Brun", img: Tapis3},
+            { background: "grey", color: "Gris", img: Tapis4},
         ],
     },
     {
@@ -121,10 +121,10 @@ export const data = {
         picture: Sac1,
         url: "moumoute",
         options: [
-            { background: "black", color: "noir", img: Sac1},
-            { background: "blue", color: "bleu", img: Sac2},
-            { background: "brown", color: "brun", img: Sac3},
-            { background: "pink", color: "rose", img: Sac4},
+            { background: "black", color: "Noir", img: Sac1},
+            { background: "blue", color: "Bleu", img: Sac2},
+            { background: "brown", color: "Brun", img: Sac3},
+            { background: "pink", color: "Rose", img: Sac4},
         ],
     },
     {

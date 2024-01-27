@@ -6,7 +6,7 @@ import styles from '@/pages/products/imageModal.module.css';
 const Passport = () => {
   const [product, setProduct] = useState(data.products[0]);
   const [quantity, setQuantity] = useState(1);
-  const [activeColorBtn, setActiveColorBtn] = useState(0); // Initialiser avec l'index du bouton par défaut
+  const [activeColorBtn, setActiveColorBtn] = useState(0);
 
   const handleOptionClick = (newOption) => {
     setImage(newOption);
@@ -17,7 +17,7 @@ const Passport = () => {
   };
 
   const handleColorBtnClick = (index) => {
-    setActiveColorBtn(index); // Mettre à jour l'index du bouton actif
+    setActiveColorBtn(index);
   };
 
   if (!product) {

@@ -7,7 +7,9 @@
   
   .modalContent {
     position: relative;
-    margin-top: 160px
+    margin-top: 160px;
+    width: 90%;
+    max-width: 536px;
   }
   
   .fullscreenImage {
@@ -19,7 +21,6 @@
     margin-top: 20px;
     padding: 8px;
     display: flex;
-   
     flex-direction: column;
     justify-content: space-between;
   }
@@ -51,7 +52,7 @@
   }
 
   .box_btn {
-    width: 250px;
+   
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
@@ -61,7 +62,7 @@
     display: flex;
   }
 
-  .colorBtn {
+  .colorBtn, .btn {
     width: 120px;
     padding: 8px;
     border-radius: 16px;
@@ -71,29 +72,22 @@
     background-color: #fff;
   }
 
-  .colorBtn:hover {
+
+
+  .colorBtn:hover, .btn:hover {
     border: 1px solid rgb(0, 0, 0);
-    
     cursor: pointer;
   }
 
-  .activeColorBtn {
+  .activeColorBtn, .activeBtn {
     color: white;
     background-color: black;
   }
 
-  .btn {
-    padding: 8px;
-    width: 50px;
-    color: white;
-    opacity: 0.8;
-    transition: .4s ease-in-out;
-  }
+  
 
-  .btn:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
+  
+
 
   .closeButton {
     position: absolute;
