@@ -8,6 +8,9 @@ const Barboteuse = () => {
   const [quantity, setQuantity] = useState(1);
   const [activeColorBtn, setActiveColorBtn] = useState(0);
   const [image, setImage] = useState(data.products[7].picture)
+  const [products, setProducts] = useState([]);
+
+  const cartChangeEvent = new Event('cartChange');
 
   const handleOptionClick = (newOption) => {
     setImage(newOption);
@@ -24,6 +27,17 @@ const Barboteuse = () => {
   if (!product) {
     return <div>Produit non trouvé</div>;
   }
+
+  const addToCart = () => {
+    let storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+  
+    storedProducts.push(product); // Ajoute directement l'objet props sans modification
+    localStorage.setItem('products', JSON.stringify(storedProducts));
+    console.log('Product added to the cart:', product);
+    setProducts(storedProducts);
+    window.dispatchEvent(cartChangeEvent);
+    alert('Le produit a bien été ajouté au panier');
+  };
 
   return (
     <div>
@@ -77,7 +91,7 @@ const Barboteuse = () => {
                   ))}
                 </select>
               </div>
-              <button className={styles.basketBtn}> Ajouter au panier </button>
+              <button className={styles.basketBtn} onClick={addToCart}> Ajouter au panier </button>
             </div>
           </div>
         </div>

@@ -30,14 +30,12 @@ const Hamburger = ({productsLength}) => {
         />        
       </div>
       {isMenuOpen && (
-       <div className={styles.filter}>
          <ul className={styles.menu}>
-          <li className={styles.menu_link}><Link href='/'> Accueil </Link> </li>
-          <li className={styles.menu_link}><Link href='/products'> Boutique </Link>  </li>   
-          <li className={styles.menu_link}><Link href='/contact'>Contact </Link>  </li>
+          <li className={styles.menu_link}><Link href='/' onClick={handleMenuToggle}> Accueil </Link> </li>
+          <li className={styles.menu_link}><Link href='/products' onClick={handleMenuToggle}> Boutique </Link>  </li>   
+          <li className={styles.menu_link}><Link href='/contact' onClick={handleMenuToggle}>Contact </Link>  </li>
+          <li className={styles.menu_link}><Link href='/emploi' onClick={handleMenuToggle}> Précautions d'emploi </Link>  </li>
         </ul>
-        <div className={styles.test}></div>
-       </div>
       )}
       <Link  href='/card'> 
         <li className={styles.menu_basket}>

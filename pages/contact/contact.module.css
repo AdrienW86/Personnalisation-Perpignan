@@ -1,0 +1,94 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px);
+  }
+  
+  .title {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-style: italic;
+  }
+  
+  .h2 {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 2em;
+    margin: 150px auto 0px auto;
+  }
+  
+  .p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 3.5vw;
+    height: 100%;
+    line-height: 1.2;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .wash {
+    margin: 10px;
+    list-style: none;
+  }
+  
+  .spanWash {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); 
+    aspect-ratio: 1/1;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+    justify-content: center;
+    height: calc(100vh - 100px);
+  }
+  
+  .contact_h3 {
+    display: flex;
+    width: 300px;
+    margin: 10px auto;
+    color: #000000;
+    justify-content: left;
+  }
+  
+  .h3 {
+    width: 250px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .infos {
+    padding-top: 120px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .logoBasket {
+    position: relative;
+    top: 17px
+  }
