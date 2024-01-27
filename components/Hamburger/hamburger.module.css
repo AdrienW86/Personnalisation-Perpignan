@@ -127,7 +127,8 @@
     padding: 6px;
     border-radius: 50%;
     color: rgb(255, 255, 255);
-    background-color: red;  
+    background-color: red; 
+    z-index: 12
 }
 
 .logoBasket {
