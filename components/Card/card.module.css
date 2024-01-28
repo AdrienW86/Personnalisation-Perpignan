@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
 
 .card {
-  margin: 0 10px;
+  margin: 10px;
   width: 45%;
   transition: .4s ease-in-out;
 }
@@ -13,21 +13,29 @@
 .banner {
   position: relative;
   max-width: 1200px;
+  padding: 8px;
   transition: .4s ease-in-out;
   overflow: hidden;
-  background-color: black;
   aspect-ratio: 7/9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner:hover {
+  transform: rotate(0.3deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .name {
   font-family: 'Arapey', serif;
   font-size: 1em;
-  margin: 10px 0 0 0;
+  padding: 10px; 
   height: 50px;
+  background-color: rgb(255, 255, 255);
 }
 
   .price {
     font-size: 1em;
     font-weight: 400;
     height: 45px;
+    background-color: rgb(255, 255, 255);
   }

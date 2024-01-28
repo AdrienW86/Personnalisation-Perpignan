@@ -11,6 +11,7 @@ export default function Shop() {
       <section className={styles.container}>
         {data.products.map((el, index) => (                
           <Card 
+            key={index}
             name={el.name} 
             price={el.price} 
             picture={el.picture}
@@ -20,16 +21,14 @@ export default function Shop() {
       </section>
       <h2 className={styles.h2}> Nouveautés </h2>
       <section className={styles.container}>
-        {data.productsColor.map((el, index) => (
-                    
-            <Card 
-              name={el.name} 
-              price={el.price} 
-              picture={el.picture}
-              url={el.url}
-              options={el.options}
-            />           
-          
+        {data.productsColor.map((el, index) => (                   
+          <Card 
+            name={el.name} 
+            price={el.price} 
+            picture={el.picture}
+            url={el.url}
+            options={el.options}
+          />                    
         ))}
       </section>
     </>

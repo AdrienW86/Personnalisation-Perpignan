@@ -1,6 +1,21 @@
-import Barboteuse from '@/assets/banner3.jpg'
+import Barboteuse from '@/assets/barboteuse.jpg'
+import Barboteuse2 from '@/assets/barboteuse2.jpg'
+import Barboteuse3 from '@/assets/barboteuse3.jpg'
+import Barboteuse4 from '@/assets/barboteuse4.jpg'
+import Barboteuse5 from '@/assets/barboteuse5.jpg'
+import Barboteuse6 from '@/assets/barboteuse6.jpg'
+import Barboteuse7 from '@/assets/barboteuse7.jpg'
+
 import Welcome from '@/assets/welcome.jpg'
+import Welcome2 from '@/assets/welcome2.jpg'
+import Welcome3 from '@/assets/welcome3.jpg'
+import Welcome4 from '@/assets/welcome4.jpg'
+
 import Passport from '@/assets/passport.jpg'
+import Passport2 from '@/assets/passport2.jpg'
+import Passport3 from '@/assets/passport3.jpg'
+import Passport4 from '@/assets/passport4.jpg'
+import Passport5 from '@/assets/passport5.jpg'
 
 import Coffret from '@/assets/coffret-islamique.jpg'
 import Coffret2 from '@/assets/coffret-islamique2.jpg'
@@ -8,6 +23,9 @@ import Coffret3 from '@/assets/coffret-islamique3.jpg'
 
 import Sommeil from '@/assets/sommeil.jpg'
 import Sommeil2 from '@/assets/sommeil2.jpg'
+import Sommeil3 from '@/assets/banner2.jpg'
+import Sommeil4 from '@/assets/banner3.jpg'
+import Sommeil5 from '@/assets/sommeil5.jpg'
 
 import Couverture from '@/assets/couverture.jpg'
 
@@ -47,7 +65,14 @@ export const data = {
         price: 12.99,
         picture: Passport,
         url: "passport",
-       
+        color: "Blanc",
+        options: [
+            { img: Passport},
+            { img: Passport2},
+            { img: Passport3},
+            { img: Passport4},
+            { img: Passport5}
+        ],     
     },
     {
         id: uuidv4(),
@@ -72,6 +97,9 @@ export const data = {
         options: [
             { img: Sommeil},
             { img: Sommeil2},
+            { img: Sommeil3},
+            { img: Sommeil4},
+            { img: Sommeil5},
         ],
     },
     {
@@ -79,42 +107,78 @@ export const data = {
         name: "Ballon personnalisé",
         price: 38.99,
         picture: Welcome,
-        url: "ballon"
+        url: "ballon",
+        color: "Transparent",
+        options: [
+            { img: Welcome},
+            { img: Welcome2},
+            { img: Welcome3},
+            { img: Welcome4}
+        ],
     },
     {
         id: uuidv4(),
         name: "Set couverture",
         price: 34.99,
         picture: Couverture,
-        url: "couverture"
+        url: "couverture",
+        color: "Transparent",
+        options: [
+            { img: Couverture},
+            { img: Couverture},
+            { img: Welcome3},
+            { img: Welcome4}
+        ],
     },
     {
         id: uuidv4(),
         name: "Bouquet 10 roses personnalisé",
         price: 54.99,
         picture: Rose,
-        url: "roses"
+        url: "roses",
+        color: "Rouge",
+        options: [
+            { img: Rose},           
+        ],
     },
     {
         id: uuidv4(),
         name: "Sac en toile de jute",
         price: 15.99,
         picture: Toile,
-        url: "sac"
+        url: "sac",
+        color: "Blanc",
+        options: [
+            { img: Toile},           
+        ],
     },
     {
         id: uuidv4(),
         name: "Barboteuse",
         price: 29.99,
         picture: Barboteuse,
-        url: "barboteuse"
+        url: "barboteuse",
+        color: "Blanc",
+        options: [
+            { img: Barboteuse},  
+            { img: Barboteuse2}, 
+            { img: Barboteuse3}, 
+            { img: Barboteuse4},
+            { img: Barboteuse5},
+            { img: Barboteuse6},
+            { img: Barboteuse7},
+        ],
     },
     {
         id: uuidv4(),
         name: "Panneau acrylique",
         price: 16.99,
         picture: Panneau,
-        url: "panneau"
+        url: "panneau",
+        color: "Blanc",
+        options: [
+            { img: Panneau},  
+        ],
     },
   ],
   productsColor: [

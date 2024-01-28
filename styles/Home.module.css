@@ -36,9 +36,8 @@
 }
 
 .background {
-  
- display: flex;
- width: 100%;
+  display: flex;
+  width: 100%;
   max-width: 1200px;
   transition: .4s ease-in-out; 
 }

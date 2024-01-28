@@ -9,7 +9,7 @@
     width: 90%;
     margin-top: 20px;
   }
-
+  
 .imgContainer {
     position: relative;
     width: 100%;
@@ -17,7 +17,7 @@
     transition: .4s ease-in-out;
     overflow: hidden;
     background-color: black;
-    aspect-ratio: 8.1/10;
+    aspect-ratio: 8/10;
 }
   .title {
     margin-top: 20px;
@@ -72,9 +72,6 @@
     margin: 15px 10px 30px 0px;
     background-color: #fff;
   }
-
-
-
   .colorBtn:hover, .btn:hover {
     border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
@@ -111,7 +108,6 @@
 
   .quantity {
     display: flex;
-   
   }
 
   .select {
