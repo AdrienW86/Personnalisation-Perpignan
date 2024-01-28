@@ -35,7 +35,7 @@ const Card = ({ name, price, picture, url, options }) => {
         <p className={styles.name}> {name} </p>
       </div>
       <div>
-        <p className={styles.price}>€ {price} EUR</p>
+        <p className={styles.price}> {price} € </p>
       </div>
      
      
