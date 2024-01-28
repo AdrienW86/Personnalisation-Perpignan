@@ -81,3 +81,8 @@
   transition: .4s ease-in-out;
   background-color: black;
 }
+
+.background {
+  display: flex;
+  justify-content: center;
+}
