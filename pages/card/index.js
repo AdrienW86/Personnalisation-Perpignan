@@ -130,39 +130,37 @@ console.log(productsWithDelivery)
           <div className={styles.warning}>Vous n'avez aucun produit dans votre panier</div>
         ) : (
           <div className={styles.container}>
-            <h3 className={styles.h3}> Livraison offerte à partir de 80 € d'achats <br></br> expédié en 72h </h3>
             {getUniqueProducts().map((el, index) => (
               <div key={index} className={styles.product}>
                 <button onClick={() => deleteAllCart(el)} className={styles.close}>
                   X
                 </button>
-                <p className={styles.name}>{el.name}</p>
+               
                 <div className={styles.infos}>
-                  <p className={styles.quantity}>Quantité: {el.quantity}</p>
-                  <p className={styles.price}>Prix: {el.price}€</p>
-                </div>
-                <div className={styles.pictureAndBtnContainer}>
-                  <button onClick={() => addToCart(el)} className={styles.addBtn}>
-                    +
-                  </button>
                   <Image
-                    className={styles.picture}
-                    src={el.picture}
-                    height={100}
-                    width={100}
-                    alt='image produit'
-                  />
-                  <button onClick={() => deleteToCart(el)} className={styles.removeBtn}>
-                    -
-                  </button>
+                      className={styles.picture}
+                      src={el.picture}
+                      height={200}
+                      width={150}
+                      alt='image produit'
+                    />
+                  <div className={styles.productDetails}> 
+                    <div className={styles.nameAndPrice}>
+                      <p className={styles.name}>{el.name}</p>
+                      <p className={styles.price}>Prix: {el.price}€</p>
+                    </div>
+                    <div className={styles.pictureAndBtnContainer}>                 
+                      <button onClick={() => deleteToCart(el)} className={styles.removeBtn}>-</button>
+                      <p className={styles.quantity}> {el.quantity}</p>
+                      <button onClick={() => addToCart(el)} className={styles.addBtn}>+</button>
+                    </div>
+                    <div> 
+                     Total: {el.price * el.quantity}€
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className={styles.total}>
-                    Total:
-                    <span className={styles.spanTotal}> {el.quantity * el.price}€ </span>
-                  </p>
-                  {el.sizes && <p> Taille: {el.selectedSize}</p>}
-                </div>
+               
+                
               </div>
             ))}
             <div className={styles.delivery}>

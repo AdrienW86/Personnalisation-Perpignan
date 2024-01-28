@@ -1,8 +1,11 @@
 .container {
-    display: flex;
-    flex-direction: column;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+  min-height: 90vh;
+}
+
   .title {
     width: 100%;
     text-align: center;
@@ -15,7 +18,7 @@
     text-align: center;
     padding: 16px;
     font-size: 2em;
-    margin: 150px auto 0px auto;
+    margin: 30px auto 0px auto;
   }
   
   .p {
@@ -52,20 +55,10 @@
     aspect-ratio: 1/1;
   }
   
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    border-top: 1px solid black;
-    justify-content: center;
-    height: calc(100vh - 100px);
-  }
-  
   .contact_h3 {
     display: flex;
     width: 300px;
-    margin: 10px auto;
+    margin: 30px auto;
     color: #000000;
     justify-content: left;
   }
@@ -79,15 +72,9 @@
   }
   
   .infos {
-    padding-top: 120px;
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 30px;
   }
-  
   
   .logoBasket {
     position: relative;
-   
   }
