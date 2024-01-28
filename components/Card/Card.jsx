@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './card.module.css';
+import { useRouter } from 'next/navigation';
 
-const Card = ({ name, price, picture, options }) => {
+const Card = ({ name, price, picture, url, options }) => {
+
+  const router = useRouter()
   const [showModal, setShowModal] = useState(false);
 
   const handleShowImage = () => {
@@ -13,23 +16,26 @@ const Card = ({ name, price, picture, options }) => {
     setShowModal(false);
   };
 
+  const navigation = (url) => {
+    router.push(`/products/${url}`)
+  }
+
   return (
     <section className={styles.card}>
       <div className={styles.banner}>
         <Image
           src={picture}
-          layout="fill"
+          fill
           priority
-          className={styles.picture}
           alt='banner'
-          onClick={handleShowImage}
+          onClick={() => navigation(url)}
         />
       </div>
       <div>
         <p className={styles.name}> {name} </p>
       </div>
       <div>
-        <p className={styles.price}>{price}€</p>
+        <p className={styles.price}>€ {price} EUR</p>
       </div>
      
      

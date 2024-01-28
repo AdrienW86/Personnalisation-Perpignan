@@ -1,12 +1,11 @@
 .banner {
     position: relative;
     width: 100%;
-    margin-top: 10vh;
     max-width: 1200px;
     transition: .4s ease-in-out;
     overflow: hidden;
     background-color: black;
-    aspect-ratio: 1/1;
+    aspect-ratio: 8.1/10;
   }
   
   .banner:hover {

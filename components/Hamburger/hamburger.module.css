@@ -1,138 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Blinker:wght@200&display=swap');
+
 .hamburger_container {
-    width: 100%;
-   display: flex;
-  }
+  width: 100%;
+  display: flex;
+  position: relative
+}
 
-  .h1 {
-   display: flex;
-   margin: 0 auto;
-  }
+.h1 {
+  display: flex;
+  margin: 0 auto;
+}
 
-  .p {
-    height: 40px;
-    margin: 0;
-    padding: 0
-  }
+.p {
+  height: 40px;
+  margin: 0;
+  padding: 0
+}
   
-  .hamburger {
-    top: 50px;
-    left: 30px;
-    width: 30px;
-    height: 20px;
-    z-index: 30;
-    border: none;
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    background-color: white;;
-    justify-content: space-between;
-  }
+.hamburger {
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 20px;
+  z-index: 30;
+  border: none;
+  opacity: 0.7;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: white;;
+  justify-content: space-between;
+}
   
-  .open {
-    height: 19px;
-  }
+.open {
+  height: 19px;
+}
    
-  .line {
-    width: 100%;
-    height: 2px;
-    transition: transform 0.3s, opacity 0.3s;
-  }
+.line {
+  width: 100%;
+  height: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
   
-  .line:hover{
-    background-color: #000000;
-  }
+.line:hover{
+  background-color: #000000;
+}
     
-  .open .line:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
+.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
   
-  .open .line:nth-child(2) {
-    opacity: 0;
-  }
+.open .line:nth-child(2) {
+  opacity: 0;
+}
     
-  .open .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
   
-  .open .line, .close .line {
-    background-color: rgb(3, 3, 3);
-  }
+.open .line, .close .line {
+  background-color: rgb(3, 3, 3);
+}
   
-  .open:hover .line, .close:hover .line {
-    cursor: pointer;
-    background-color: #DBB44F;
-  }
+.open:hover .line, .close:hover .line {
+  cursor: pointer;
+  background-color: #DBB44F;
+}
 
-  .filter {
-   
-    width: 100%;
-    
-    height: 90vh;
-    display: flex;
-    border-right: 2px solid black;
-  }
+.menu {
+  position: absolute;
+  top: 105px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: calc(100vh - 105px);
+  width: 100%;
+  padding-top: 30px;
+  opacity: 1;
+  z-index: 2;
+  background-color: white;
+  border-top: 1px solid rgb(253, 253, 253);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
 
-  .menu {
-    position: absolute;
-    top: 120px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    height: 90vh;
-    width: 100%;
-    padding-top: 40px;
-    opacity: 1;
-    background-color: white;
-  }
-
-  .menu_header {
-    height: 100px;
-    opacity: 0;
-    background-color: transparent;
-  }
+.menu_header {
+  height: 100px;
+  opacity: 0;
+  background-color: transparent;
+}
   
-  .menu_link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8px 16px;
-    height: 70px;
-    font-size: 1.8em;
-    font-weight: 300;
-    transition: .4s ease-in-out;
-    color: rgb(12, 12, 12)
-  }
+.menu_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 26px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: lighter;
+  transition: .4s ease-in-out;
+  color: rgb(12, 12, 12)
+}
   
-  .menu_link:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(248, 248, 248);
-  } 
+.menu_link:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(248, 248, 248);
+} 
 
 .menu_basket {
-    position: absolute;
-    right: 20px;
-    top: 50px;
-    list-style: none;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  list-style: none;
 }
   
 .span {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 45px;
-    left: 16px;
-    width: 25px;
-    height: 25px;
-    font-size: 0.8em;
-    padding: 6px;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    background-color: red; 
-    z-index: 12
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 65px;
+  left: 16px;
+  width: 25px;
+  height: 25px;
+  font-size: 0.8em;
+  padding: 6px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0); 
+  z-index: 12
 }
 
 .logoBasket {
-   position: relative;
-   bottom: 5px;
-   z-index: 10
+  position: relative;
+  bottom: 20px;
+  z-index: 10
 }

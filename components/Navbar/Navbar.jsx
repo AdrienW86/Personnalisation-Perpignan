@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Delivery from '@/components/Delivery/Delivery'
 import Hamburger from '../Hamburger/Hamburger';
 import styles from './navbar.module.css';
 
@@ -29,7 +30,8 @@ export default function Navbar() {
   }, [router.pathname]);
 
   return (
-    <nav className={styles.nav}>    
+    <nav className={styles.nav}>   
+      <Delivery /> 
       <Hamburger productsLength={productsLength}  className={styles.hamburger} />    
     </nav>
   );

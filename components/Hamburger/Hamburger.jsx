@@ -20,21 +20,23 @@ const Hamburger = ({productsLength}) => {
         <span className={styles.line}></span>
         <span className={styles.line}></span>
       </button>
-      <div className={styles.h1}>
-        <Image 
-          src={Logo}
-          height={100}
-          width={100}
-          className={styles.logoBasket}
-          alt="image du panier"
-        />        
+      <div className={styles.h1}> 
+        <Link href='/'>
+          <Image 
+            src={Logo}
+            height={100}
+            width={100}
+            className={styles.logo}
+            alt="image du panier"
+          />    
+        </Link>           
       </div>
       {isMenuOpen && (
          <ul className={styles.menu}>
-          <li className={styles.menu_link}><Link href='/' onClick={handleMenuToggle}> Accueil </Link> </li>
-          <li className={styles.menu_link}><Link href='/products' onClick={handleMenuToggle}> Boutique </Link>  </li>   
-          <li className={styles.menu_link}><Link href='/contact' onClick={handleMenuToggle}>Contact </Link>  </li>
-          <li className={styles.menu_link}><Link href='/emploi' onClick={handleMenuToggle}> Précautions d'emploi </Link>  </li>
+          <li className={styles.menu_link}><Link href='/' onClick={handleMenuToggle}> ACCUEIL </Link> </li>
+          <li className={styles.menu_link}><Link href='/products' onClick={handleMenuToggle}> BOUTIQUE </Link>  </li>   
+          <li className={styles.menu_link}><Link href='/contact' onClick={handleMenuToggle}>CONTACT </Link>  </li>
+          <li className={styles.menu_link}><Link href='/emploi' onClick={handleMenuToggle}> PRECAUTIONS D'EMPLOI </Link>  </li>
         </ul>
       )}
       <Link  href='/card'> 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { data } from '@/data';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styles from '@/pages/products/imageModal.module.css';
 
 const Barboteuse = () => {
@@ -9,6 +12,16 @@ const Barboteuse = () => {
   const [activeColorBtn, setActiveColorBtn] = useState(0);
   const [image, setImage] = useState(data.products[7].picture)
   const [products, setProducts] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (current) => setCurrentSlide(current)
+  };
 
   const cartChangeEvent = new Event('cartChange');
 
@@ -44,7 +57,32 @@ const Barboteuse = () => {
       {product &&    
         <div className={styles.modalBackdrop} >
           <div className={styles.modalContent}>
-            <Image src={image} alt="Fullscreen" className={styles.fullscreenImage} width={400} height={400}/>
+          <Slider  {...settings}>
+            <div className={styles.imgContainer}>
+              <Image 
+                src={image} 
+                fill
+                priority
+                alt='banner'              
+              />
+            </div>
+            <div className={styles.imgContainer}>
+              <Image 
+                src={image} 
+                fill
+                priority
+                alt='banner'              
+              />
+            </div>
+            <div className={styles.imgContainer}>
+              <Image 
+                src={image} 
+                fill
+                priority
+                alt='banner'              
+              />
+            </div>
+            </Slider>
             <div className={styles.title}>
               <h2 className={styles.h2}>{product.name}</h2>
               <p className={styles.price}>{product.price}€ </p>

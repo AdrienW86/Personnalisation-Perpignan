@@ -1,13 +1,10 @@
 .nav {
-    height: 120px;
+    height: 166px;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    padding-top: 20px;
     background-color: white;
-    position: fixed;
     width: 100%;
     z-index: 5;
-    border-bottom: 1px solid black;
 }
 
 .ul {
@@ -48,12 +45,11 @@
 }
 
 .menu {
-   width: 0;
+    width: 0;
     transition: left 0.3s ease-in-out; 
 }
 
-.open {
-   
+.open {   
     transition: left 0.3s ease-in-out; 
    width: 100%;
   }
