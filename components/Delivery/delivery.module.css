@@ -30,9 +30,16 @@
 }
 
 .prev {  
-    left: 50px;
+    left: 10px;
 }
 
 .next {
-    right: 50px;
+    right: 10px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 370px) {
+    .text {   
+        padding-top: 3px;
+        font-size: 12px; 
+    }
 }
