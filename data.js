@@ -3,7 +3,12 @@ import Welcome from '@/assets/welcome.jpg'
 import Passport from '@/assets/passport.jpg'
 
 import Coffret from '@/assets/coffret-islamique.jpg'
+import Coffret2 from '@/assets/coffret-islamique2.jpg'
+import Coffret3 from '@/assets/coffret-islamique3.jpg'
+
 import Sommeil from '@/assets/sommeil.jpg'
+import Sommeil2 from '@/assets/sommeil2.jpg'
+
 import Couverture from '@/assets/couverture.jpg'
 
 import Wallet from '@/assets/wallet.jpg'
@@ -41,21 +46,33 @@ export const data = {
         name: "Protège-passeport",
         price: 12.99,
         picture: Passport,
-        url: "passport"
+        url: "passport",
+       
     },
     {
         id: uuidv4(),
         name: "Coffret islamique",
         price: 38.99,
         picture: Coffret,
-        url: "coffret"
+        url: "coffret",
+        color: "Noir",
+        options: [
+            { img: Coffret},
+            { img: Coffret2},
+            { img: Coffret3},
+        ],
     },
     {
         id: uuidv4(),
         name: "Sommeil velours",
         price: 34.99,
         picture: Sommeil,
-        url: "sommeil"
+        url: "sommeil",
+        color: "Blanc",
+        options: [
+            { img: Sommeil},
+            { img: Sommeil2},
+        ],
     },
     {
         id: uuidv4(),

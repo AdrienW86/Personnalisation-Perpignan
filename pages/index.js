@@ -1,18 +1,14 @@
 import { Inter } from 'next/font/google'
 import { data } from '@/data'
-import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Card from '@/components/Card/Card'
 import Banner from '@/components/Banner/Banner'
-import Banner2 from '@/assets/banner2.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
- 
   return (
-    <>     
-       
+    <>       
       <main className={`${styles.main} ${inter.className}`}>
       <Banner />
         <h2 className={styles.title}>BEST-SELLER</h2>
@@ -43,11 +39,7 @@ export default function Home() {
               picture={data.products[7].picture}
               url={data.products[7].url}
             />            
-         </div>
-         
-         
-   
-      
+         </div>      
       </main>
     </>
   )
